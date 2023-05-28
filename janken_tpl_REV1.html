@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>じゃんけん</title>
+</head>
+<body>
+
+<header>
+  <h1>じゃんけん</h1>
+</header>
+
+<main>
+
+  <p class="intro">最初はグー、ジャンケン、、、、</p>
+  <p class="intro">あなたの手は、、、、</p>
+  
+  
+  <ul>
+    <li id="gu_btn"><img src="./img/Guu.png" alt="Guu"></li>
+    <li id="cho_btn"><img src="./img/Choki.png" alt="Choki"> </li>
+    <li id="par_btn"><img src="./img/pa.png" alt="Pa"> </li>
+  </ul>
+
+  <p class="intro">相手の手は、、、、</p>
+    
+  <div id="pc_hands"> </div>
+
+  <p class="intro">結果は、、、、</p>
+  <div id="judgment">勝ち</div>
+</main>
+
+<footer></footer>
+<script>
+
+// グーの時
+$("#gu_btn").on("click", function()
+{const PC =Math.ceil(Math.random()*3);
+  const Y =1;
+
+  if(PC==1)
+  {$("#pc_hands").html("グー");
+  $("#judgment").html("あいこです");
+}else if(PC==2)
+{$("#pc_hands").html("チョキ");
+$("#judgment").html("あなたの勝ちです！");
+}else if(PC==3)
+{$("#pc_hands").html("パー");
+$("#judgment").html("あなたの負けです");
+};
+ 
+});
+
+// チョキの時
+$("#cho_btn").on("click", function()
+{const PC =Math.ceil(Math.random()*3);
+  const Y =1;
+
+  if(PC==1)
+  {$("#pc_hands").html("グー");
+  $("#judgment").html("あなたの負けです");
+}else if(PC==2)
+{$("#pc_hands").html("チョキ");
+$("#judgment").html("あいこです");
+}else if(PC==3)
+{$("#pc_hands").html("パー");
+$("#judgment").html("あなたの勝ちです！");
+};
+ 
+});
+
+// パーの時
+$("#par_btn").on("click", function()
+{const PC =Math.ceil(Math.random()*3);
+  const Y =1;
+
+  if(PC==1)
+  {$("#pc_hands").html("グー");
+  $("#judgment").html("あなたの勝ちです！");
+}else if(PC==2)
+{$("#pc_hands").html("チョキ");
+$("#judgment").html("あなたの負けです");
+}else if(PC==3)
+{$("#pc_hands").html("パー");
+$("#judgment").html("あいこです");
+};
+ 
+});
+
+
+
+  </script>
+  
+</body>
+</html>
